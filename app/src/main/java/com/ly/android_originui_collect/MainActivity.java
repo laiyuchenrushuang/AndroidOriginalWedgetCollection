@@ -9,6 +9,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.NumberPicker;
 import android.widget.TabHost;
 import android.support.design.widget.TabLayout;
 import android.widget.TextSwitcher;
@@ -70,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
         mytab.addTab(mytab.newTab().setText("卡四").setIcon(R.mipmap.ic_launcher));
         mytab.addTab(mytab.newTab().setText("卡五").setIcon(R.mipmap.ic_launcher));
         mytab.addTab(mytab.newTab().setText("卡六").setIcon(R.mipmap.ic_launcher));
+
+        NumberPicker np = findViewById(R.id.np);
+        np.setMaxValue(19);
 }
 
     private void doWhile() {
