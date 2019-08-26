@@ -16,6 +16,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="控件集合"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="20sp" />
+
             <TextSwitcher
                 android:id="@+id/ts"
                 android:layout_width="wrap_content"
@@ -87,21 +95,12 @@
                 </LinearLayout>
             </TabHost>
 
-            <TableLayout
+            <android.support.design.widget.TabLayout
+                android:id="@+id/mytab"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TableRow>
-
-                    <Button android:text="TableLayout" />
-
-                    <Button android:text="TableLayout" />
-
-                    <Button android:text="TableLayout" />
-
-                    <Button android:text="TableLayout" />
-                </TableRow>
-            </TableLayout>
+            </android.support.design.widget.TabLayout>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -136,37 +135,187 @@
             <TimePicker
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:timePickerMode="spinner">
-            </TimePicker>
+                android:timePickerMode="spinner"></TimePicker>
+
             <ToggleButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textOff="关"
-                android:textOn="开"/>
-            <android.support.v7.widget.Toolbar
+                android:textOn="开" />
+
+            <Toolbar
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark">
+                android:layout_marginStart="-18dp">
+
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="目录"
-                    android:layout_centerInParent="true"/>
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="目录" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true" />
                 </RelativeLayout>
-            </android.support.v7.widget.Toolbar>
+            </Toolbar>
+
+            <TwoLineListItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/black">
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="斑马"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_1"
+                    android:text="长颈鹿"
+                    android:textColor="@android:color/white" />
+            </TwoLineListItem>
+
+            <SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/sp_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/progressBarStyleHorizontal"/>
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:id="@+id/floatbutton"
+                app:elevation="6dp"
+                android:clickable="true"
+                app:borderWidth="0dp"
+                android:backgroundTint="@android:color/white"
+                app:rippleColor="#0097a7"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                app:pressedTranslationZ="12dp"
+                android:layout_height="wrap_content" />
+            <CalendarView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></CalendarView>
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal"
+                android:background="?android:attr/listDivider" />
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+              <android.support.constraint.Guideline
+                  android:id="@+id/guidelineBegin"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:visibility="visible"
+                  app:layout_constraintGuide_begin="100dp" />
+
+              <Button
+                  android:id="@+id/button"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="16dp"
+                  android:text="Button"
+                  app:layout_constraintLeft_toLeftOf="@+id/guidelineBegin"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <android.support.constraint.Guideline
+                  android:id="@+id/guidelineEnd"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:visibility="visible"
+                  android:orientation="vertical"
+                  app:layout_constraintGuide_end="100dp" />
+
+              <Button
+                  android:id="@+id/buttonEnd"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="48dp"
+                  android:text="Button2"
+                  app:layout_constraintRight_toLeftOf="@+id/guidelineEnd"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <android.support.constraint.Guideline
+                  android:id="@+id/guidelinePercent"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:visibility="visible"
+                  android:orientation="vertical"
+                  app:layout_constraintGuide_percent="0.8" />
+
+              <Button
+                  android:id="@+id/buttonPercent"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="96dp"
+                  android:text="Button3"
+                  app:layout_constraintLeft_toLeftOf="@+id/guidelinePercent"
+                  app:layout_constraintTop_toTopOf="parent" />
+          </LinearLayout>
+            <CheckedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"></DatePicker>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

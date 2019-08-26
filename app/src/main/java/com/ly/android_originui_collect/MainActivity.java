@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TabHost;
+import android.support.design.widget.TabLayout;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
@@ -59,6 +60,16 @@ public class MainActivity extends AppCompatActivity {
         th.addTab(th.newTabSpec("tab1").setIndicator("标签1",getResources().getDrawable(R.mipmap.ic_launcher)).setContent(R.id.tab1));
         th.addTab(th.newTabSpec("tab2").setIndicator("标签2",null).setContent(R.id.tab2));
         th.addTab(th.newTabSpec("tab3").setIndicator("标签3",null).setContent(R.id.tab3));
+
+
+        TabLayout mytab =  findViewById(R.id.mytab);
+
+        mytab.addTab(mytab.newTab().setText("卡一").setIcon(R.mipmap.ic_launcher));
+        mytab.addTab(mytab.newTab().setText("卡二").setIcon(R.mipmap.ic_launcher));
+        mytab.addTab(mytab.newTab().setText("卡三").setIcon(R.mipmap.ic_launcher));
+        mytab.addTab(mytab.newTab().setText("卡四").setIcon(R.mipmap.ic_launcher));
+        mytab.addTab(mytab.newTab().setText("卡五").setIcon(R.mipmap.ic_launcher));
+        mytab.addTab(mytab.newTab().setText("卡六").setIcon(R.mipmap.ic_launcher));
 }
 
     private void doWhile() {
